@@ -212,12 +212,8 @@ def check_price():
         writer.writerow(data)
 
     if(price < 300000):
-        send.mail()
+        send_mail()
 ```
-
-> ⚠️ `send.mail()` on the last line should be `send_mail()` — note the underscore. This is a bug in the original code that will raise a `NameError` at runtime.
-
----
 
 ## 9. Run the Tracker on a Schedule
 
