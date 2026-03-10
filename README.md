@@ -273,10 +273,18 @@ def send_mail():
 
     msg = f"Subject: {subject}\n\n{body}"
 
+   # Send to YOURSELF
     server.sendmail(
-        'naufalizzudin36@gmail.com',
+        'naufalizzudin36@gmail.com',  # FROM: you
+        'naufalizzudin36@gmail.com',   # TO: also you!
         msg
     )
+    
+    server.quit()
+    print("✅ Email sent to yourself!")
+
+# Call the function
+send_mail()
 ```
 
 > ⚠️ **Before this works:**
