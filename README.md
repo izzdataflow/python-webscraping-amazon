@@ -310,17 +310,4 @@ Price below target? → send_mail()
     ↓
 Wait → repeat (loop)
 ```
-
----
-
-## 🐛 Bugs Noted in Original Code
-
-| Step | Issue | Fix |
-|---|---|---|
-| Step 7 | Missing closing `)` on `open(...)` — `'UTF8' as f:` | Add `)` before `as f` |
-| Step 8 | `send.mail()` uses dot instead of underscore | Change to `send_mail()` |
-| Step 11 | `server.sendmail()` is missing the recipient email argument | Add recipient as second argument: `server.sendmail('from@gmail.com', 'to@gmail.com', msg)` |
-
----
-
 > 💬 *Always store credentials like email passwords in environment variables or a `.env` file — never hardcode them directly in your script.*
